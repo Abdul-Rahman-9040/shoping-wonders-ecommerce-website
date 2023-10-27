@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/cheeckout.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>Shoping Wonders</title>
+  </head>
+  <body>
+        <!--Navbar-->
+    <header>
+      <nav class="nav">
+        <a href="/" class="logo" class="a"style="text-decoration: none;"><span style="color:rgb(2, 171, 67)">Shop</span> Wonders</a>
+
+        <div class="hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+        <div class="nav__link hide">
+          <a href="index.html" class="a">home</a>
+          <a href="laptop.html"class="a">Laptop</a>
+          <a href="desktop.html"class="a">Desktop</a>
+          <a href="assecories.html"class="a">assecories</a>
+          <a href="cart.html"class="a">Cart</a>
+        </div>
+      </nav>
+    </header>
+    <script src="assets/js/script.js"></script>
+    <!--checkout-->
+    <section class="checkout-container">
+        <h1>Checkout</h1>
+
+        <div class="order-summary">
+          <h2>Order Summary</h2>
+          <div class="cart-items-container">
+            <!-- Display cart items here, similar to the cart page -->
+          </div>
+          <p>Total: ₹<span id="total">0.00</span></p>
+        </div>
+
+        <div class="payment-options">
+          <h2>Payment Options</h2>
+          <label>
+            <input type="radio" name="payment" value="cod" /> Cash on Delivery (COD)
+          </label>
+          <label for="payment-option-card">
+            <input type="radio" id="payment-option-card" name="payment" value="card">
+            Credit/Debit Card
+          </label>
+          
+          <label>
+            <input type="radio" name="payment" value="upi" /> UPI Payment
+          </label>
+          <!-- You can add more payment options as needed -->
+        </div>
+<!-- Card details form -->
+<form id="card-details-form" style="display: none" novalidate>
+    <h2>Card Details</h2>
+    <div class="form-group">
+      <label for="card-number">Card Number</label>
+      <input type="text" id="card-number" name="card-number" required>
+    </div>
+    <div class="form-group">
+      <label for="expiration-date">Expiration Date</label>
+      <input type="text" id="expiration-date" name="expiration-date" placeholder="MM/YYYY" required>
+    </div>
+    <div class="form-group">
+      <label for="cvv">CVV</label>
+      <input type="text" id="cvv" name="cvv" required>
+    </div>
+  </form>
+  <form id="upi-details-form" style="display: none" novalidate>
+    <h2>UPI Details</h2>
+    <div class="form-group">
+      <label for="upi-id">UPI ID</label>
+      <input type="text" id="upi-id" name="upi-id" required>
+    </div>
+  </form>
+        <div class="address-section">
+          <h2>Shipping Address</h2>
+          <form id="address-form">
+            <div class="form-group">
+              <label for="fullname">Full Name</label>
+              <input type="text" id="fullname" name="fullname" required />
+            </div>
+            <div class="form-group">
+              <label for="address">Address</label>
+              <textarea id="address" name="address" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="city">City</label>
+              <input type="text" id="city" name="city" required />
+            </div>
+            <div class="form-group">
+              <label for="zip">ZIP Code</label>
+              <input type="text" id="zip" name="zip" required />
+            </div>
+          </form>
+        </div>
+        
+
+        <div class="checkout-actions">
+          <button id="place-order-button">Place Order</button>
+          <a href="cart.html">Back to Cart</a>
+        </div>
+      </section>
+      <script src="assets/js/checkout.js"></script>
+    
+    <!--footer-->
+    <footer class="footer">
+      <br><br><br><br><br>
+      <div class="footer__addr">
+        <h1 class="footer__logo">Shop Wonders</h1>
+            
+        <h2>Contact</h2>
+        
+        <address>
+          5534 Somewhere In. The World 22193-10212<br>
+              
+          <a class="footer__btn" href="mailto:rahmanckm018@gmail.com">Email Us</a>
+        </address>
+      </div>
+      
+      <ul class="footer__nav">
+        <li class="nav__item">
+          <h2 class="nav__title">Quick Links</h2>
+    
+          <ul class="nav__ul">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+    
+            <li>
+              <a href="about.html">About</a>
+            </li>
+                
+            <li>
+              <a href="laptop.html">Laptops</a>
+            </li>
+            <li>
+              <a href="desktop.html">Desktops</a>
+            </li>
+          </ul>
+        </li>
+        
+        <li class="nav__item nav__item--extra">
+          <h2 class="nav__title">Shop Wonders</h2>
+          <p>Your one-stop destination for laptops, desktops, and a wide range of accessories. Explore our tech wonderland today!</p>        </li>
+        
+        <li class="nav__item">
+          <h2 class="nav__title">Developer Contact</h2>
+          
+          <ul class="nav__ul">
+            <li>
+              <i style="font-size:24px" class="fa">&#xf09b;</i> <a href="https://github.com/Abdul-Rahman-9040"> GitHub</a>
+            </li>
+            
+            <li>
+              <i style="font-size:24px" class="fa">&#xf08c;</i><a href="#"> Linkedin</a>
+            </li>
+            
+            <li>
+              <i style="font-size:24px" class="fa">&#xf16d;</i><a href="https://instagram.com/itss___rahman?igshid=NGVhN2U2NjQ0Yg=="> Instagram</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      
+      <div class="legal">
+        <p>&copy; 2023 Abdul Rahman. All rights reserved.</p>
+        
+        <div class="legal__links">
+          <span>Made with <span class="heart">♥</span> Shop Wonders</span>
+        </div>
+      </div>
+    </footer>  
+  </body>
+</html>
